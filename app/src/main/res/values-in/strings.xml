@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StoryApp</string>
+
+    <string name="name_label">Nama</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="date_created">dd-mm-yyyy</string>
+    <string name="registration_label">Daftar Akun</string>
+    <string name="dont_have_account_label">Belum punya akun? Daftar sekarang</string>
+    <string name="login_label">Login</string>
+    <string name="logout_label">Log out</string>
+    <string name="registration_desc">Silakan buat akun dahulu untuk memulai aplikasi</string>
+    <string name="login_desc">Silakan login dahulu untuk memulai aplikasi</string>
+    <string name="username">Username</string>
+    <string name="description">Deskripsi</string>
+    <string name="camera">Kamera</string>
+    <string name="galeri">Galeri</string>
+    <string name="upload">Unggah</string>
+    <string name="desc_story_image">Ini adalah gambar cerita</string>
+    <string name="desc_fab_add">Tombol untuk menambahkan cerita</string>
+    <string name="desc_splashscreen_image">Ini adalah gambar splashscreen</string>
+    <string name="desc_button_camera">Tombol Kamera</string>
+    <string name="desc_switch_camera_button">Tombol Tukar Kamera</string>
+    <string name="retry">Coba lagi</string>
+    <string name="map_label">Peta</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satelit</string>
+    <string name="terrain_type">Medan</string>
+    <string name="hybrid_type">Campuran</string>
+</resources>

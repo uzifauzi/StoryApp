@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">StoryApp</string>
+
+    <string name="name_label">Name</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="date_created">dd-mm-yyyy</string>
+    <string name="registration_label">Sign in account</string>
+    <string name="dont_have_account_label">Don\'t have an account? Register now</string>
+    <string name="login_label">Login</string>
+    <string name="logout_label">Log out</string>
+    <string name="registration_desc">Please create an account first to start the application.</string>
+    <string name="login_desc">Please login first to start the application.</string>
+    <string name="username">Username</string>
+    <string name="description">Description</string>
+    <string name="camera">Camera</string>
+    <string name="galeri">Galery</string>
+    <string name="upload">Upload</string>
+    <string name="desc_story_image">This is story image</string>
+    <string name="desc_fab_add">Button for add story</string>
+    <string name="desc_splashscreen_image">This is splashscreen image</string>
+    <string name="desc_button_camera">Camera Button</string>
+    <string name="desc_switch_camera_button">Switch Camera Button</string>
+    <string name="retry">Try Again</string>
+    <string name="map_label">Maps</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
+
+</resources>
