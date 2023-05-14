@@ -1,15 +1,26 @@
 package com.nurfauzi.storyapp.presentation.register
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import android.view.View
 import android.widget.Toast
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
+import com.nurfauzi.storyapp.data.StoryRepository
 import com.nurfauzi.storyapp.data.StoryResult
+import com.nurfauzi.storyapp.data.local.database.StoryDatabase
+import com.nurfauzi.storyapp.data.network.api.ApiConfig
+import com.nurfauzi.storyapp.data.network.api.ApiService
+import com.nurfauzi.storyapp.data.preferences.LoginPreferences
+import com.nurfauzi.storyapp.data.preferences.ViewModelFactory
 import com.nurfauzi.storyapp.databinding.ActivityRegisterBinding
 import com.nurfauzi.storyapp.presentation.login.LoginActivity
+import com.nurfauzi.storyapp.presentation.login.LoginViewModel
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -22,13 +33,18 @@ class RegisterActivity : AppCompatActivity() {
 
     private var isLessThanEight: Boolean = false
 
+    private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "token")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val btnRegister = binding.btnRegister
 
-        registerViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[RegisterViewModel::class.java]
+        val pref = LoginPreferences.getInstance(dataStore)
+        val factory = ViewModelFactory.getInstance(this, pref)
+        registerViewModel = ViewModelProvider(this, factory).get(
+            RegisterViewModel::class.java
+        )
 
         registerViewModel.isLoading.observe(this) {
             showLoading(it)
